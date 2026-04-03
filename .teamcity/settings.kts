@@ -33,6 +33,10 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    params {
+        param("env.AWS_ACCESS_KEY_ID", "AKIARJEIDCY7JZ7KBAOD")
+    }
+
     vcs {
         root(DslContext.settingsRoot)
     }
