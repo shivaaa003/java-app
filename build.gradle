@@ -1,0 +1,20 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    // Keep it simple for a console app sample.
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    // Your Main class is in the default package.
+    mainClass = 'Main'
+}
+
