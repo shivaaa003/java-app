@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.gradle
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -34,5 +35,13 @@ object Build : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+    }
+
+    steps {
+        gradle {
+            name = "runner gradel"
+            id = "runner_gradel"
+            tasks = "clean build"
+        }
     }
 })
